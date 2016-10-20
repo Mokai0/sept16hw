@@ -3,7 +3,7 @@ function Movie(title, year, duration) {
   this.year = year;
 }
 
-Movie.prototpe = Object.create(Media.prototpe);
+Movie.prototpe = Object.create(Media.prototype);
 
 Movie.prototype.toHTML = function() {
   var htmlString = '<li';
