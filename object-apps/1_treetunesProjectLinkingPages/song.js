@@ -5,7 +5,7 @@ function Song(title, artist, duration) {
 }
 
 //This copies the 'Media' prototype refferences to and properties to the 'Song' prototype. Creating a prototype chain.
-Song.prototpe = Object.create(Media.prototype);
+Song.prototype = Object.create(Media.prototype);
 
 Song.prototype.toHTML = function() {
   var htmlString = '<li';
