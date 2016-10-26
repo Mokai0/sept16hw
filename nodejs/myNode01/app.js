@@ -1,5 +1,6 @@
 //Problem: We need a simple way to look at a user's badge count and JavaScript points
-var http = require("https");
+var https = require("https");
+var http = require("http");
 var username = "mohammadhanbali5";
 
 //Solution: Use Node.js to connect to Treehouse's API to get profile information to print out
@@ -15,8 +16,8 @@ function printError(error) {
   console.error(error.message);
 }
 
-//Connect to the API URL (http://teamtreehouse.com/username.json)
-var request = http.get("https://teamtreehouse.com/" + username + ".json", function(response) {
+//Connect to the API URL (https://teamtreehouse.com/username.json)
+var request = https.get("https://teamtreehouse.com/" + username + ".json", function(response) {
   // console.dir(response);
   // console.log(response.statusCode);
   //Read the data
